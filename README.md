@@ -94,11 +94,11 @@ Achieved a higher training accuracy of 99.66% and a test accuracy of 98.92%, hav
 ![Alt Text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/VGG16%20CM.png)
 
 Recall scores for Best Model Overall
- Dyskeratotic:  99%        
- Koilocytotic:  97%          
- Metaplastic:   99%           
- Parabasal:    100%           
- Superficial-Intermediat: 100%
+ - Dyskeratotic:  99%        
+ - Koilocytotic:  97%          
+ - Metaplastic:   99%           
+ - Parabasal:    100%           
+ - Superficial-Intermediat: 100%
 
 The improvements in recall for Dyskeratotic, Metaplastic, Parabasal, and Superficial-Intermediate categories suggest that the fine-tuning of the VGG16 model has enhanced the model's performance in recognizing these classes.
 
