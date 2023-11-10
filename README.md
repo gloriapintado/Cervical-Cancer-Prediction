@@ -93,7 +93,7 @@ Achieved a higher training accuracy of 99.66% and a test accuracy of 98.92%, hav
 ## Confusion Matrix Best Model Overall
 ![Alt Text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/VGG16%20CM.png)
 
-Recall scores for Best Model Overall:
+Recall scores for Best Model Overall
  Dyskeratotic:  99%        
  Koilocytotic:  97%          
  Metaplastic:   99%           
