@@ -7,9 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/13Ko94x7PmeGGXpwXRrJqIK6dWW_Tq9Xh
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
-
 import streamlit as st
 from tensorflow.keras.models import load_model
 import numpy as np
@@ -42,4 +39,3 @@ if uploaded_file is not None:
 
     # Display the result
     st.write(f'Prediction: {class_names[predicted_class]}')
-
