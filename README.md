@@ -7,23 +7,32 @@
 Females in Africa have a notable prevalence of cervical cancer cases, according to the "Accurate Diagnosis Health" clinic. They want to set up neighborhood screening facilities throughout Africa in order to improve their clinic's standing and address this important health issue. The identification and referral process for possible instances of cervical cancer will be improved at these centers by using an automated tool for preliminary analysis. The main goal is to guarantee quicker and more precise identification, which will allow for improved cervical cancer case evaluation and treatment.
 
 ## Data Source
+The dataset in Kaggle is named “Multi Cancer Dataset,” which contains many images of different types of cancer.
+The dataset had 25,000 images.
 
-I found a dataset in Kaggle named “Multi Cancer Dataset” which contains many images of different types of cancers such as Acute Lymphoblastic Leukemia, Brain Cancer, Breast Cancer, Cervical Cancer, Kidney Cancer, Lung, Colon Cancer, Lymphoma, and Oral Cancer. However, I will be focusing on Cervical Cancer since “AD Health” main goal is to determine by screening diagnosis.
+Having 5 classes of cells (5,000 images).
+         0: Dyskeratotic \
+         1: Koilocytotic \
+         2: Metaplastic \
+         3: Parabasal \
+         4: Superficial-Intermediate
+         
+Balance data
+Image size: 150 x 150  
 
-This 25,000-image dataset on cervical cancer which includes these characteristics:
+### Classes of Cells 
 
-- Having a balance data.
-- Images size : 150 x 150
-- Having 5 different classes:
-    - 0: Dyskeratotic
-    - 1: Koilocytotic
-    - 2: Metaplastic
-    - 3: Parabasal
-    - 4: Superficial-Intermediat
+Contains normal, abnormal and benign cells.
+- Superficial-Intermediate cells (normal)
+- Parabasal cells (normal)
+- Koilocytotic cells (abnomal)
+- Dyskeratotic cells (abnormal)
+- Metaplastic cells (benign)
+Abnormal cells may indicate the presence of precancerous or cancerous cells.
 
-## Modeling with Convolutional Neural Networks (CNN)
+# Modeling
 
-### Base Model CNN Arquitecture
+## Base Model 
 
 - Input Layer 
 - 1 layer of 2D-convolutional 
@@ -32,21 +41,29 @@ This 25,000-image dataset on cervical cancer which includes these characteristic
 - Dense Layers
 - Output Layer
 
-### Accuracy and Loss Curves Base Model CNN
+### Accuracy and Loss Curves Base Model 
 ![Alt Text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/Baseline%20Curves.png)
 
-The model accuracy on the training is a 98% and the accuracy on the test data is 91%, having a validation loss of 0.3203.
-The accuracy is pretty good. However, the difference in performance between the training and test data strongly indicates overfitting. To better improvement in to overfitted we can later add some dropuot and regularization layers.
+### Confusion Matrix Base Model
+![Alt Text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/Base%20Confusion%20Matrix.png)
 
-As our metric for this problem we are using accuracy, but also I'm having in mind the metric recall. Want to decrease the recall metric as posible, because reducing recall, is reducing false negatives.
+The model accuracy on the training is 98%, and the accuracy on the test data is 91%, with a validation loss of 32.03%.
+The accuracy is pretty good. However, the difference in performance between the training and test data strongly indicates overfitting. To improve overfitting, we can later add some dropout and regularization layers.
 
-### Best Model CNN Arquitecture
-- Input Layer (Normalization)
-- 5 layers of 2D-convolutional 
-- 4 layers of MaxPooling2D 
-- Flattening Layer
-- Dense Layers (with Regularization and Dropout)
-- Output Layer
+As our metric for this problem, we are using accuracy, but I'm also keeping in mind the metric of recall. I want to decrease the recall metric as much as possible because reducing recall means reducing false negatives.
+
+## Transfer Learning : VGG16 Model
+
+This is the VGG16 neural network, pretrained on various images for image classification, offering the advantage of improved accuracy in image recognition.
+
+### VGG16 Model before Fine-Tune
+
+- Initially, were all layers are frozen, resulting in a 96% training accuracy and 95% test accuracy with a test loss of 19.42%. Next step is fine tuning for better results.
+
+### VGG16 Model after Fine-Tune (Best Model)
+
+
+
 
 ### Accuracy and Loss Curves Best Model CNN
 ![Alt Text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/Best%20Model%20So%20Far%20Curves.png)
