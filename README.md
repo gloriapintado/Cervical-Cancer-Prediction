@@ -17,7 +17,7 @@ Having 5 classes of cells (5,000 images).
          3: Parabasal \
          4: Superficial-Intermediate
          
-Balance data
+Balance data 
 Image size: 150 x 150  
 
 ### Classes of Cells 
@@ -28,6 +28,7 @@ Contains normal, abnormal and benign cells.
 - Koilocytotic cells (abnomal)
 - Dyskeratotic cells (abnormal)
 - Metaplastic cells (benign)
+  
 Abnormal cells may indicate the presence of precancerous or cancerous cells.
 
 # Modeling
