@@ -1,4 +1,5 @@
 # Cervical Cancer Prediction
+#### by [Gloria Pintado](https://github.com/gloriapintado)
 
 ![Alt text](https://github.com/gloriapintado/Cervical-Cancer-Prediction/blob/main/images/Cancer%20Awareness%20Months%20heading%20image%20651x342.png)
 
@@ -80,11 +81,11 @@ After the accuracy metric being important, the recall metric is also really impo
 
 Recall scores for Best Model Overall
 
-Dyskeratotic: 99% 
-Koilocytotic: 97% 
-Metaplastic: 99% 
-Parabasal: 100% 
-Superficial-Intermediat: 100%
+- Dyskeratotic: 99% 
+- Koilocytotic: 97% 
+- Metaplastic: 99% 
+- Parabasal: 100% 
+- Superficial-Intermediat: 100%
 
 The improvements in recall for Dyskeratotic, Metaplastic, Parabasal, and Superficial-Intermediate categories suggest that the fine-tuning of the VGG16 model has enhanced the model's performance in recognizing these classes.
 
