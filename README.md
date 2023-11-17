@@ -11,7 +11,7 @@ Females in Africa have a notable prevalence of cervical cancer cases, according 
 The dataset in Kaggle is named “Multi Cancer Dataset,” which contains many images of different types of cancer.
 The dataset had 25,000 images.
 
-- Having 5 classes of cells (5,000 images).
+- Having 5 classes of cells (5,000 images). \
          0: Dyskeratotic \
          1: Koilocytotic \
          2: Metaplastic \
