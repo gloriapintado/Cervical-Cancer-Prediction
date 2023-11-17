@@ -26,7 +26,7 @@ The dataset had 25,000 images.
 Contains normal, abnormal and benign cells.
 - Superficial-Intermediate cells (normal)
 - Parabasal cells (normal)
-- Koilocytotic cells (abnomal)
+- Koilocytotic cells (abnormal)
 - Dyskeratotic cells (abnormal)
 - Metaplastic cells (benign)
   
